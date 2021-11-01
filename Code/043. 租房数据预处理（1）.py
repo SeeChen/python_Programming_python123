@@ -11,3 +11,9 @@
 3  西城        菊儿大同  2室1厅  47.09     8000
 4  西城  交道口北二条34号院  1室1厅  42.57     4400
 '''
+import numpy as np
+import pandas as pd
+file_path = open("zfsj.csv", encoding="utf-8")
+file_data = pd.read_csv(file_path)
+file_data['面积(㎡)']=file_data['面积(㎡)'].str.replace('平米','').astype(np.float64)
+file_data.to_csv("zfsj2_after.csv",encoding="utf-8",header=True)
