@@ -15,5 +15,5 @@ import numpy as np
 import pandas as pd
 file_path = open("zfsj.csv", encoding="utf-8")
 file_data = pd.read_csv(file_path)
-file_data['面积(㎡)']=file_data['面积(㎡)'].str.replace('平米','').astype(np.float64)
+file_data['面积(㎡)'] = file_data['面积(㎡)'].str.replace('平米','').astype(np.float64)
 file_data.to_csv("zfsj2_after.csv",encoding="utf-8",header=True)
