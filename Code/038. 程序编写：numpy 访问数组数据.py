@@ -13,18 +13,18 @@ https://www.python123.io/images/e9/37/2d4404902e81134b485a717599c0.png
 4）找出数组中数值符合[2.5,3.5]的数据，将结果置于arr4。
 5）找出数组中的负数和大于3的数，将结果置于arr5。 
 '''
-import numpy as np
+from numpy import *
 L=[[ 2.73351472,  0.47539713,  3.63280356,  1.4787706 ,  3.13661701],
        [ 1.40305914,  2.27134829,  2.73437132,  1.88939679,  0.0384238 ],
        [ 1.56666697, -0.40088431,  0.54893762,  3.3776724 ,  2.27490386]]
-arr = np.array(L)
-arr1 = arr[0:3, 1:2]
-arr2 = arr[1:3, 2:5]
-arr3 = arr[0, 1:5:2];arr3 = np.append(arr3, arr[2, 1:5:2])
-arr4 = arr[arr >= 2.5];arr4 = np.delete(arr4, np.where(arr4 > 3.5)[0])
-temp = np.where((arr > 3) | (arr < 0), arr, 0);arr5 = temp[temp != 0]
-print("arr1=",arr1)
-print("arr2=",arr2)
-print("arr3=",arr3)
-print("arr4=",arr4)
-print("arr5=",arr5)
+arrL=array(L)
+arr1=arrL[:,1:2]
+arr2=arrL[1:,[2, 3, 4]]
+arr3=arrL[[0, 0, 2, 2], [1, 3, 1, 3]]
+arr4=arrL[(arrL >= 2.5) & (arrL <= 3.5)]
+arr5=arrL[where((arrL < 0) | (arrL > 3))]
+print("arr1=", arr1)
+print("arr2=", arr2)
+print("arr3=", arr3)
+print("arr4=", arr4)
+print("arr5=", arr5)
