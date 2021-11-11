@@ -1,5 +1,12 @@
 '''
 自然界有很多图形很规则，符合一定的数学规律。科赫(Koch)曲线在众多经典数学曲线中非常著名，由瑞典数学家冯•科赫(H•V•Koch)于1904年提出，由于其形状类似雪花，也称为雪花曲线。本题已给出绘制科赫曲线的函数koch_snowflake(order, scale=10)。请调用koch_snowflake函数绘制图形。
+要求：
+设置画布尺寸为9*3英寸；
+添加子图1，使用默认格式；
+添加子图2，设置#填充颜色为灰色#eeeeee，边缘颜色为天空蓝xkcd:sky blue，线宽为3；
+添加子图3，设置#无填充色，边缘颜色为紫色，线宽为1;
+保存文件名为koch.png ;
+本题目支持在线测试。
 '''
 import matplotlib.pyplot as plt
 import numpy as np
