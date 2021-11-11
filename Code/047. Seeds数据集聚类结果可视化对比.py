@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 plt.rcParams["font.sans-serif"] = "SimHei"
 plt.rcParams["axes.unicode_minus"] = False
 #读文件seed_cluster_3.csv
-df = pd.read_csv("C:/Users/USER/Downloads/seed_cluster_3.csv",index_col=0)
+df = pd.read_csv("seed_cluster_3.csv",index_col=0)
 ls_labels = sorted(np.unique(df['labels']))
 df1 = df[df['labels'] == ls_labels[0]]
 df2 = df[df["labels"] == ls_labels[1]]
